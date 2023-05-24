@@ -1,0 +1,274 @@
+html, body {
+    width: 100%;
+    height: 100;
+}
+
+ header{
+    font-family: Gugi;
+ }
+ body {
+     margin: 10;  
+ }
+ 
+ a {
+     text-decoration: none;
+     color: white;
+ }
+
+
+ img{
+     margin-left: 15px;
+     margin-top: 35px;
+ }
+
+
+ /*------------상단바------------*/
+ .bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: olivedrab;
+    border-radius: 10px;
+    height: 90px;
+}
+
+.logo {
+    font-size: 25px;
+    padding-left: 200px;
+     
+   
+}
+
+
+.menu{
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+    padding-right: 150px;
+}
+
+.menu li {
+    padding: 8px 80px;
+}
+
+.menu li:hover{
+    background-color:rgb(4, 49, 4);
+    border-radius: 10px;
+    
+}
+
+/*----숨김메뉴----*/
+.menu > li {
+
+    position: relative; 
+}
+ ul {
+    list-style: none;
+}
+.menu > li > ul {
+    display: none; 
+    position: absolute;
+    width: 100%;
+    background-color:rgb(7, 70, 7);
+    border-radius: 0px 0px 10px 10px;
+    left: 0px;
+    text-align: center;
+}
+
+.menu > li > ul > li {
+    padding: 10px ;
+}
+
+.menu > li > ul > li > a {
+    font-size: 13px;
+   
+    color:whitesmoke;
+}
+
+.menu > li:hover > ul {
+    display: block;
+    z-index: 10; 
+}
+
+.menu > li > ul > li > a:hover {
+    color : black;
+   
+}
+
+ /*----마실 설명 부분-----*/
+nav {
+    font-family: Song Myung;
+
+    font-size: 18px;
+    background-color: whitesmoke;
+    float: left;
+    position: relative;
+    width: 20%; height: 70%;
+   
+    margin: 32px;
+    padding: 15px;
+    color: rgb(91, 91, 91);
+}
+
+
+
+ /*-----메인 사진 슬라이드------*/
+
+ section {
+    float: left;
+    height: 70%; width: 80%;
+    position: relative;
+
+}
+
+
+
+ *{ margin:0; padding:0;}
+ 
+.section input[id*="slide"] {
+    display: none;
+}
+
+.section .slidewrap {
+    
+    max-height: 750px;
+    max-width: 1200px;
+    margin:0 auto;
+    overflow: hidden; /*영역 벗어나는 부분 가리기*/
+}
+
+.section .slidelist{
+    white-space: nowrap;  /*부모영역 벗어나게*/
+    font-size: 0;
+    padding: 0; margin: 0;
+}
+.section .slidelist > li {
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+    transition: all .7s;
+}
+.section .slidelist > li > a {
+    display: block;
+    position: relative;
+}
+.section .slidelist > li > a img {
+    width: 100%;
+}
+.section .slidelist label {
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 50px;
+    cursor: pointer;
+}
+.section .slidelist .left {
+    left: 30px;
+    background: url(media/left-arrow.png) center center / 100% no-repeat;
+}
+.section .slidelist .right {
+    right: 30px;
+    background: url(media/right-arrow.png) center center / 100% no-repeat;
+}
+.section [id="slide1"]:checked ~ .slidewrap .slidelist > li {transform: translateX(0%);}
+.section [id="slide2"]:checked ~ .slidewrap .slidelist > li {transform: translateX(-101%);}
+.section [id="slide3"]:checked ~ .slidewrap .slidelist > li {transform: translateX(-202%);}
+
+/*-----추천메뉴-------------*/
+
+.re_menu{
+    position: relative;
+    margin-top: 1%;
+    width: 100%;
+}
+
+.re_menu > p {
+        font-size: 25px;
+        padding-top: 70px;
+        font-weight: bold;
+      }
+    
+    .re_menu span {
+        font-size: 20px;
+        color:gray;
+    }
+    
+   .line {
+       margin-top: 10px;
+       border: none;
+       border-top: 3px solid rgb(129, 128, 128);
+       height: 5px;
+
+   }
+    
+    
+    .re_menu img {
+        margin-top: 20px;
+        margin-left: 30px;
+        margin-bottom: 5px;
+        width: 80%;
+        
+    }
+    
+    .bestdrinks {
+        float: left;
+        margin-bottom: 40px;
+        width: 100%;
+        margin: 0 auto; 
+    }
+    
+    
+    .all {
+        
+        width: 1650px;
+        margin: 0 auto;
+    }
+    
+    .menupic {
+        width: 19%;
+        height: 420px;
+        float: left;
+        background-color: whitesmoke;
+        margin: 5px;
+       
+    }
+    
+    .menupic:hover {
+      background-color: rgb(229, 226, 226);  
+    }
+    
+    .menupic > p {
+        padding-top: 20px;
+        padding-left: 15px;
+        padding-right: 15px;
+        font-size: 16px;
+    }
+    
+
+    
+    .name {
+        text-align: center;
+    }
+    
+   footer {
+      
+      width: 100%; height: 200px;
+      position: relative;
+      float: left;
+      background-color: lightgray;
+      margin-top: 50px;
+   }
+
+   .details{
+   
+       text-align: center;
+       margin: 30px;
+    
+   }
+
+   .st{
+       text-decoration: underline;
+       font-size: 17px;
+       font-weight: bold;
+   }
